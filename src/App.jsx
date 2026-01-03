@@ -10,12 +10,35 @@ const Website = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const toggleFaq = (index) => setOpenFaq(openFaq === index ? null : index);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setFormStatus('submitting');
-    setTimeout(() => {
-      setFormStatus('success');
-    }, 1500);
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get('userName'),
+      email: formData.get('userEmail'),
+      message: formData.get('userMessage'),
+    };
+
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setFormStatus('success');
+      } else {
+        const errorData = await response.json();
+        console.error('Erreur envoi email:', errorData);
+        setFormStatus('error');
+      }
+    } catch (err) {
+      console.error('Erreur réseau:', err);
+      setFormStatus('error');
+    }
   };
 
   const scrollToFaq = (index) => {
@@ -494,18 +517,23 @@ const Website = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="flex flex-col">
                     <label className="text-sm font-bold text-gray-700 mb-2">Votre Nom de famille</label>
-                    <input type="text" placeholder="Nom de famille" required className="p-4 bg-gray-50 border border-stone-200 rounded-xl focus:ring-2 focus:ring-amber-500 outline-none" />
+                    <input name="userName" type="text" placeholder="Nom de famille" required className="p-4 bg-gray-50 border border-stone-200 rounded-xl focus:ring-2 focus:ring-amber-500 outline-none" />
                   </div>
                   <div className="flex flex-col">
                     <label className="text-sm font-bold text-gray-700 mb-2">Votre Email</label>
-                    <input type="email" placeholder="contact@famille.fr" required className="p-4 bg-gray-50 border border-stone-200 rounded-xl focus:ring-2 focus:ring-amber-500 outline-none" />
+                    <input name="userEmail" type="email" placeholder="contact@famille.fr" required className="p-4 bg-gray-50 border border-stone-200 rounded-xl focus:ring-2 focus:ring-amber-500 outline-none" />
                   </div>
                 </div>
                 <div className="flex flex-col">
                   <label className="text-sm font-bold text-gray-700 mb-2">Votre message pour la famille</label>
-                  <textarea rows="4" placeholder="Bonjour, nous habitons Paris et souhaiterions offrir un petit compagnon à nos enfants..." required className="p-4 bg-gray-50 border border-stone-200 rounded-xl focus:ring-2 focus:ring-amber-500 outline-none"></textarea>
+                  <textarea name="userMessage" rows="4" placeholder="Bonjour, nous habitons Paris et souhaiterions offrir un petit compagnon à nos enfants..." required className="p-4 bg-gray-50 border border-stone-200 rounded-xl focus:ring-2 focus:ring-amber-500 outline-none"></textarea>
                 </div>
-                <button type="submit" className="w-full py-5 bg-gray-900 text-white rounded-xl font-bold text-lg hover:bg-gray-800 transition shadow-lg">Envoyer ma demande</button>
+                {formStatus === 'error' && (
+                  <p className="text-red-500 text-sm text-center">Une erreur est survenue lors de l'envoi. Veuillez réessayer plus tard.</p>
+                )}
+                <button type="submit" disabled={formStatus === 'submitting'} className="w-full py-5 bg-gray-900 text-white rounded-xl font-bold text-lg hover:bg-gray-800 transition shadow-lg disabled:opacity-50">
+                  {formStatus === 'submitting' ? 'Envoi en cours...' : 'Envoyer ma demande'}
+                </button>
               </form>
             )}
           </div>
