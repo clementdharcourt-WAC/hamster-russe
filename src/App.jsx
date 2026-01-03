@@ -111,8 +111,8 @@ const Website = () => {
           </div>
 
           <div className="text-center mt-6 pt-4 border-t border-gray-100">
-             <p className="font-serif italic text-lg text-amber-800">« Celui qui est fidèle dans les petites choses le sera aussi dans les grandes. »</p>
-             <p className="text-sm text-gray-500 mt-2">En prenant soin de ce petit compagnon avec sérieux et amour, les deux frères se préparent ensemble à porter, plus tard, de plus hautes responsabilités.</p>
+            <p className="font-serif italic text-lg text-amber-800">« Celui qui est fidèle dans les petites choses le sera aussi dans les grandes. »</p>
+            <p className="text-sm text-gray-500 mt-2">En prenant soin de ce petit compagnon avec sérieux et amour, les deux frères se préparent ensemble à porter, plus tard, de plus hautes responsabilités.</p>
           </div>
         </div>
       )
@@ -176,27 +176,27 @@ const Website = () => {
     {
       question: "Quelle est l'espérance de vie d'un hamster russe ?",
       answer: (
-         <div className="space-y-4 text-gray-700">
-            <p>L'espérance de vie d'un hamster russe est malheureusement assez courte, ce qui est important à expliquer aux enfants (comme Éloi et William) pour les préparer. En moyenne, un hamster russe vit entre <strong>18 mois et 3 ans</strong>.</p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
-              <div className="bg-green-50 p-3 rounded-lg border border-green-100 text-center">
-                <h4 className="font-bold text-green-800">La jeunesse</h4>
-                <p className="text-xs text-green-600 font-medium">0 à 10 mois</p>
-                <p className="text-sm mt-2 text-gray-600">Actif et explorateur.</p>
-              </div>
-              <div className="bg-blue-50 p-3 rounded-lg border border-blue-100 text-center">
-                <h4 className="font-bold text-blue-800">L'âge adulte</h4>
-                <p className="text-xs text-blue-600 font-medium">10 à 18 mois</p>
-                <p className="text-sm mt-2 text-gray-600">Rythme stabilisé.</p>
-              </div>
-              <div className="bg-orange-50 p-3 rounded-lg border border-orange-100 text-center">
-                <h4 className="font-bold text-orange-800">La vieillesse</h4>
-                <p className="text-xs text-orange-600 font-medium">Après 18-20 mois</p>
-                <p className="text-sm mt-2 text-gray-600">Ralentissement général.</p>
-              </div>
+        <div className="space-y-4 text-gray-700">
+          <p>L'espérance de vie d'un hamster russe est malheureusement assez courte, ce qui est important à expliquer aux enfants (comme Éloi et William) pour les préparer. En moyenne, un hamster russe vit entre <strong>18 mois et 3 ans</strong>.</p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+            <div className="bg-green-50 p-3 rounded-lg border border-green-100 text-center">
+              <h4 className="font-bold text-green-800">La jeunesse</h4>
+              <p className="text-xs text-green-600 font-medium">0 à 10 mois</p>
+              <p className="text-sm mt-2 text-gray-600">Actif et explorateur.</p>
             </div>
-         </div>
+            <div className="bg-blue-50 p-3 rounded-lg border border-blue-100 text-center">
+              <h4 className="font-bold text-blue-800">L'âge adulte</h4>
+              <p className="text-xs text-blue-600 font-medium">10 à 18 mois</p>
+              <p className="text-sm mt-2 text-gray-600">Rythme stabilisé.</p>
+            </div>
+            <div className="bg-orange-50 p-3 rounded-lg border border-orange-100 text-center">
+              <h4 className="font-bold text-orange-800">La vieillesse</h4>
+              <p className="text-xs text-orange-600 font-medium">Après 18-20 mois</p>
+              <p className="text-sm mt-2 text-gray-600">Ralentissement général.</p>
+            </div>
+          </div>
+        </div>
       )
     },
     {
@@ -213,10 +213,10 @@ const Website = () => {
           <div className="flex justify-between h-16 items-center">
             <div className="flex-shrink-0 flex items-center">
               <a href="#" className="text-2xl font-bold text-amber-600 tracking-tight">
-                Hamster-russe.fr
+                Hamster-russe.com
               </a>
             </div>
-            
+
             <div className="hidden md:flex space-x-8">
               <a href="#accueil" className="text-gray-600 hover:text-amber-600 px-3 py-2 text-sm font-medium transition">Accueil</a>
               <a href="#souche" className="text-gray-600 hover:text-amber-600 px-3 py-2 text-sm font-medium transition">Lignée Pure</a>
@@ -389,7 +389,7 @@ const Website = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-             {/* FEATURED: Pedagogical Values */}
+            {/* FEATURED: Pedagogical Values */}
             <article className="col-span-1 md:col-span-2 lg:col-span-3 flex flex-col md:flex-row bg-amber-100 rounded-2xl p-8 border border-amber-200 hover:shadow-xl transition shadow-md">
               <div className="flex-shrink-0 mb-6 md:mb-0 md:mr-8 flex items-center justify-center">
                 <div className="h-20 w-20 rounded-full bg-white text-amber-600 shadow-inner flex items-center justify-center">
@@ -401,7 +401,7 @@ const Website = () => {
                 <p className="text-gray-700 leading-relaxed mb-6">
                   Découvrez comment l'accueil d'un hamster russe devient une école de la vie. Entre honneur de l'engagement, maîtrise de soi et émerveillement devant l'œuvre du Créateur, nous partageons nos rituels familiaux pour impliquer vos enfants.
                 </p>
-                <button 
+                <button
                   onClick={() => scrollToFaq(0)}
                   className="inline-flex items-center font-bold text-amber-800 hover:text-amber-950 transition"
                 >
@@ -416,7 +416,7 @@ const Website = () => {
               <Utensils className="text-amber-500 mb-4" size={32} />
               <h3 className="text-xl font-bold mb-4">Alimentation équilibrée</h3>
               <p className="text-gray-600 text-sm mb-6 flex-grow">Un mélange précis de graines, légumes et protéines animales pour une santé de fer.</p>
-              <button onClick={() => scrollToFaq(1)} className="text-amber-600 text-sm font-bold flex items-center hover:underline">Voir le menu complet <ArrowRight className="ml-1" size={16}/></button>
+              <button onClick={() => scrollToFaq(1)} className="text-amber-600 text-sm font-bold flex items-center hover:underline">Voir le menu complet <ArrowRight className="ml-1" size={16} /></button>
             </article>
 
             {/* Habitat Card */}
@@ -424,7 +424,7 @@ const Website = () => {
               <Shield className="text-amber-500 mb-4" size={32} />
               <h3 className="text-xl font-bold mb-4">L'habitat idéal</h3>
               <p className="text-gray-600 text-sm mb-6 flex-grow">Litière épaisse, bain de sable et roue adaptée : les piliers du bien-être nocturne.</p>
-              <button onClick={() => scrollToFaq(2)} className="text-amber-600 text-sm font-bold flex items-center hover:underline">Découvrir l'aménagement <ArrowRight className="ml-1" size={16}/></button>
+              <button onClick={() => scrollToFaq(2)} className="text-amber-600 text-sm font-bold flex items-center hover:underline">Découvrir l'aménagement <ArrowRight className="ml-1" size={16} /></button>
             </article>
 
             {/* Apprivoisement Card */}
@@ -432,7 +432,7 @@ const Website = () => {
               <Hand className="text-amber-500 mb-4" size={32} />
               <h3 className="text-xl font-bold mb-4">Manipulation douce</h3>
               <p className="text-gray-600 text-sm mb-6 flex-grow">Gagner la confiance de son petit compagnon étape par étape, sans jamais le brusquer.</p>
-              <button onClick={() => scrollToFaq(3)} className="text-amber-600 text-sm font-bold flex items-center hover:underline">Méthode de manipulation <ArrowRight className="ml-1" size={16}/></button>
+              <button onClick={() => scrollToFaq(3)} className="text-amber-600 text-sm font-bold flex items-center hover:underline">Méthode de manipulation <ArrowRight className="ml-1" size={16} /></button>
             </article>
           </div>
         </div>
@@ -442,8 +442,8 @@ const Website = () => {
       <section id="faq" className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-             <h2 className="text-3xl font-extrabold text-gray-900">Questions Fréquentes (FAQ)</h2>
-             <p className="mt-2 text-gray-500">Réponses rapides pour nos futurs adoptants.</p>
+            <h2 className="text-3xl font-extrabold text-gray-900">Questions Fréquentes (FAQ)</h2>
+            <p className="mt-2 text-gray-500">Réponses rapides pour nos futurs adoptants.</p>
           </div>
           <div className="space-y-4">
             {faqData.map((item, index) => (
@@ -515,10 +515,10 @@ const Website = () => {
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-16">
         <div className="max-w-6xl mx-auto px-4 text-center">
-          <p className="text-2xl font-bold text-amber-500 mb-4 tracking-tighter">Hamster-russe.fr</p>
+          <p className="text-2xl font-bold text-amber-500 mb-4 tracking-tighter">Hamster-russe.com</p>
           <p className="text-gray-400 mb-8 max-w-lg mx-auto italic">Élevage familial de particuliers passionnés. Transmission de valeurs et respect de la Création.</p>
           <div className="border-t border-gray-800 pt-8 text-xs text-gray-500">
-            <p>&copy; {new Date().getFullYear()} Hamster-russe.fr - Puteaux, Hauts-de-Seine (92).</p>
+            <p>&copy; {new Date().getFullYear()} Hamster-russe.com - Puteaux, Hauts-de-Seine (92).</p>
           </div>
         </div>
       </footer>
