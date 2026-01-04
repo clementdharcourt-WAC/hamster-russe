@@ -26,6 +26,7 @@ const Website = () => {
     let hamsterName = "Hamster Syrien";
     let description = "Le choix roi pour les débutants. Grand, calme et très facile à manipuler.";
     let imgUrl = "https://images.unsplash.com/photo-1548681528-6a5c45b66b42?auto=format&fit=crop&q=80&w=800";
+    let isRussianHamster = false;
 
     if (quizAnswers.interaction === 'watch') {
       hamsterName = "Hamster de Roborovski";
@@ -35,12 +36,13 @@ const Website = () => {
       hamsterName = "Hamster Russe";
       description = "Petit, rond et généralement docile. C'est le compagnon idéal pour une première expérience familiale.";
       imgUrl = "/hamster-russe-agouti-1.jpg";
+      isRussianHamster = true;
     } else if (quizAnswers.interaction === 'handle' && quizAnswers.level === 'advanced') {
       hamsterName = "Hamster Chinois";
       description = "Grimpeur exceptionnel et très affectueux une fois apprivoisé. Il demande un peu plus d'attention au début.";
       imgUrl = "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&q=80&w=800";
     }
-    return { hamsterName, description, imgUrl };
+    return { hamsterName, description, imgUrl, isRussianHamster };
   };
 
   const handleSubmit = async (e) => {
@@ -689,7 +691,16 @@ const Website = () => {
                       "{getQuizResult().description}"
                     </p>
                     <div className="flex flex-wrap gap-4">
-                      <a href="#contact" className="px-8 py-3 bg-gray-900 text-white rounded-xl font-bold hover:bg-amber-600 transition shadow-lg">Adopter ce hamster</a>
+                      {getQuizResult().isRussianHamster ? (
+                        <a href="#contact" className="px-8 py-3 bg-gray-900 text-white rounded-xl font-bold hover:bg-amber-600 transition shadow-lg">Adopter ce hamster</a>
+                      ) : (
+                        <div className="w-full bg-amber-50 border border-amber-100 p-4 rounded-xl mb-2">
+                          <p className="text-amber-800 text-sm font-medium flex items-start">
+                            <Info className="w-5 h-5 mr-2 flex-shrink-0 mt-0.5" />
+                            Note : Notre élevage familial est exclusivement spécialisé dans le Hamster Russe (lignée pure). Nous ne proposons pas d'autres espèces à l'adoption.
+                          </p>
+                        </div>
+                      )}
                       <button onClick={resetQuiz} className="px-8 py-3 bg-white text-gray-600 border-2 border-stone-200 rounded-xl font-bold hover:bg-stone-50 transition flex items-center">
                         <RefreshCw className="w-5 h-5 mr-2" />
                         Refaire le test
