@@ -493,10 +493,17 @@ const Website = () => {
       <section className="py-20 bg-amber-50">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <MapPin size={48} className="text-amber-600 mx-auto mb-6" />
-          <h2 className="text-3xl font-extrabold mb-6">Venir à notre rencontre</h2>
-          <p className="text-lg text-gray-700 leading-relaxed mb-8">
-            Nous sommes situés à <strong>Puteaux (92800)</strong>. Pour garantir la sérénité de nos animaux et de notre foyer, la remise s'effectue sur rendez-vous à la Gare de Puteaux ou sur le Parvis de La Défense.
+          <h2 className="text-3xl font-extrabold mb-6">Zone d'adoption & Proximité</h2>
+          <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            Notre élevage est situé à <strong>Puteaux (92800)</strong>, au carrefour de plusieurs villes des Hauts-de-Seine.
+            Nous accueillons régulièrement des familles venant de <strong>Nanterre</strong>, <strong>Suresnes</strong>, <strong>Courbevoie</strong>,
+            <strong>Rueil-Malmaison</strong> et <strong>Neuilly-sur-Seine</strong>.
           </p>
+          <div className="bg-white/50 border border-amber-200 rounded-2xl p-6 inline-block">
+            <p className="text-sm text-amber-800 font-medium">
+              📍 Remise sur rendez-vous sécurisé : Gare de Puteaux ou Parvis de La Défense.
+            </p>
+          </div>
         </div>
       </section>
 
