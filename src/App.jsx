@@ -285,7 +285,7 @@ const Website = () => {
             </div>
           </div>
           <div className="hidden lg:block lg:w-1/2 ml-12">
-            <img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&q=80&w=800" alt="Hamster Russe Pur" className="rounded-2xl shadow-2xl" />
+            <img src="/hamster-russe-agouti-elevage-puteaux.jpg" alt="Deux adorables hamsters russes agouti dans leur nid - Élevage familial à Puteaux" className="rounded-2xl shadow-2xl" />
           </div>
         </div>
       </header>
