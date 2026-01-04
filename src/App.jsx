@@ -289,6 +289,7 @@ const Website = () => {
               <a href="#souche" className="text-gray-600 hover:text-amber-600 px-3 py-2 text-sm font-medium transition">Lignée Pure</a>
               <a href="#famille" className="text-gray-600 hover:text-amber-600 px-3 py-2 text-sm font-medium transition">Élevage Familial</a>
               <a href="#conseils" className="text-gray-600 hover:text-amber-600 px-3 py-2 text-sm font-medium transition">Guide Expert</a>
+              <a href="#sexage" className="text-gray-600 hover:text-amber-600 px-3 py-2 text-sm font-medium transition">Mâle ou Femelle ?</a>
               <a href="#contact" className="bg-amber-600 text-white hover:bg-amber-700 px-4 py-2 rounded-full text-sm font-medium transition shadow-md">Adopter</a>
             </div>
 
@@ -306,6 +307,7 @@ const Website = () => {
               <a href="#accueil" onClick={toggleMenu} className="block px-3 py-2 text-base font-medium text-gray-700">Accueil</a>
               <a href="#famille" onClick={toggleMenu} className="block px-3 py-2 text-base font-medium text-gray-700">Famille</a>
               <a href="#conseils" onClick={toggleMenu} className="block px-3 py-2 text-base font-medium text-gray-700">Conseils</a>
+              <a href="#sexage" onClick={toggleMenu} className="block px-3 py-2 text-base font-medium text-gray-700">Mâle ou Femelle ?</a>
               <a href="#contact" onClick={toggleMenu} className="block px-3 py-2 text-base font-medium text-amber-600 font-bold">Adopter</a>
             </div>
           </div>
@@ -529,6 +531,109 @@ const Website = () => {
                 )}
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Sexage Article Section */}
+      <section id="sexage" className="py-20 bg-stone-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-stone-200">
+            <div className="p-8 md:p-12">
+              <h2 className="text-3xl font-extrabold text-gray-900 mb-6 text-center">Reconnaître un Hamster Russe mâle ou femelle</h2>
+
+              <div className="prose prose-stone max-w-none text-gray-700 space-y-6">
+                <p>
+                  Accueillir un petit compagnon dans notre foyer à Puteaux est une belle leçon de responsabilité pour les enfants.
+                  Pour devenir de bons "gardiens de la Création", comme aiment l'apprendre <strong>Éloi et William</strong>, il est essentiel de bien connaître son animal, à commencer par son sexe.
+                </p>
+
+                <p>
+                  Déterminer si votre hamster russe est un mâle ou une femelle (ce qu'on appelle le "sexage") est une étape importante
+                  pour éviter les surprises ou simplement pour lui donner un nom qui lui correspond.
+                </p>
+
+                <div className="my-10 bg-amber-50 rounded-2xl p-4 border border-amber-100 italic text-center">
+                  <img src="/reconnaître-hamster-russe-male-femelle.jpg" alt="Schéma explicatif pour différencier un hamster mâle et femelle" className="rounded-xl shadow-md mx-auto mb-4 max-w-full h-auto" />
+                  <p className="text-sm text-amber-800">Diagramme de sexage : Comparaison des orifices et des glandes chez le hamster russe.</p>
+                </div>
+
+                <div className="space-y-8">
+                  <div>
+                    <h3 className="text-xl font-bold text-amber-900 mb-3 flex items-center">
+                      <span className="bg-amber-100 text-amber-600 w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">1</span>
+                      Le critère n°1 : La distance entre les orifices
+                    </h3>
+                    <p>C'est la méthode la plus fiable, utilisable dès la naissance par les éleveurs avertis, mais aussi très simple à observer chez un adulte.</p>
+                    <ul className="list-disc pl-6 mt-3 space-y-2">
+                      <li><strong>Le Mâle :</strong> La distance entre l'anus et l'orifice génital (le pénis) est grande. On observe un espace net de quelques millimètres entre les deux.</li>
+                      <li><strong>La Femelle :</strong> La distance est quasiment inexistante. Les deux orifices sont très proches, presque collés.</li>
+                    </ul>
+                    <div className="mt-4 bg-blue-50 p-4 rounded-xl border border-blue-100">
+                      <p className="text-sm">
+                        <strong>💡 Le conseil du papa :</strong> Pour observer votre hamster sans le stresser, placez-le dans un bocal en verre transparent que vous soulevez. Vous pourrez ainsi regarder son ventre en toute sécurité et avec douceur.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-bold text-amber-900 mb-3 flex items-center">
+                      <span className="bg-amber-100 text-amber-600 w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">2</span>
+                      Signes visuels chez le Hamster Russe adulte
+                    </h3>
+                    <p>À partir de la puberté (vers 35 à 45 jours), d'autres indices apparaissent pour vous aider.</p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                      <div className="bg-stone-50 p-5 rounded-xl border border-stone-100">
+                        <h4 className="font-bold text-gray-900 mb-2 underline decoration-amber-500 underline-offset-4 text-center">Chez le mâle</h4>
+                        <ul className="text-sm space-y-3 pt-2">
+                          <li><strong>Glande ventrale :</strong> Située au milieu du ventre (au niveau du "nombril"), elle est beaucoup plus visible et pigmentée. Elle sert à marquer son territoire.</li>
+                          <li><strong>Testicules :</strong> Visibles à l'arrière du corps, donnant à la croupe une forme plus pointue vue de dessus.</li>
+                        </ul>
+                      </div>
+                      <div className="bg-stone-50 p-5 rounded-xl border border-stone-100">
+                        <h4 className="font-bold text-gray-900 mb-2 underline decoration-pink-500 underline-offset-4 text-center">Chez la femelle</h4>
+                        <ul className="text-sm space-y-3 pt-2">
+                          <li><strong>Mamelles :</strong> Deux rangées de petits points roses sur le ventre. Chez le mâle, ces points sont totalement absents.</li>
+                          <li><strong>Forme du corps :</strong> Vue de dessus, la femelle a souvent une croupe plus arrondie que le mâle.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-4">3. Tableau récapitulatif pour un sexage facile</h3>
+                    <div className="overflow-x-auto rounded-xl border border-stone-200">
+                      <table className="min-w-full border-collapse bg-white">
+                        <thead className="bg-stone-100 text-gray-700">
+                          <tr>
+                            <th className="px-4 py-3 text-left font-bold border-b border-stone-200">Caractéristique</th>
+                            <th className="px-4 py-3 text-left font-bold border-b border-stone-200">Mâle</th>
+                            <th className="px-4 py-3 text-left font-bold border-b border-stone-200">Femelle</th>
+                          </tr>
+                        </thead>
+                        <tbody className="text-gray-600 text-sm">
+                          <tr>
+                            <td className="px-4 py-3 font-medium bg-stone-50 border-b border-stone-200 text-gray-900 focus:bg-amber-50">Distance orifices</td>
+                            <td className="px-4 py-3 border-b border-stone-200">Grande (bien séparés)</td>
+                            <td className="px-4 py-3 border-b border-stone-200">Très courte (collés)</td>
+                          </tr>
+                          <tr>
+                            <td className="px-4 py-3 font-medium bg-stone-50 border-b border-stone-200 text-gray-900">Ventre</td>
+                            <td className="px-4 py-3 border-b border-stone-200">Glande ventrale visible</td>
+                            <td className="px-4 py-3 border-b border-stone-200">Présence de mamelles</td>
+                          </tr>
+                          <tr>
+                            <td className="px-4 py-3 font-medium bg-stone-50 text-gray-900">Forme (vue de haut)</td>
+                            <td className="px-4 py-3 text-amber-900 italic">Croupe plutôt pointue</td>
+                            <td className="px-4 py-3 text-pink-900 italic">Croupe plutôt arrondie</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
