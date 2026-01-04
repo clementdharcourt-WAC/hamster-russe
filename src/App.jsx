@@ -292,16 +292,16 @@ const Website = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="bg-white p-3 rounded-lg border border-stone-100 text-sm shadow-sm">
                 <p className="font-bold mb-1 underline decoration-amber-500 underline-offset-4">Chez le mâle :</p>
-                <p>Glande ventrale visible au milieu du ventre (nombril) and croupe plus pointue.</p>
+                <p>Glande ventrale visible au milieu du ventre (nombril) et croupe plus pointue.</p>
               </div>
               <div className="bg-white p-3 rounded-lg border border-stone-100 text-sm shadow-sm">
                 <p className="font-bold mb-1 underline decoration-pink-500 underline-offset-4">Chez la femelle :</p>
-                <p>Présence de mamelles (petits points roses) and croupe plus arrondie.</p>
+                <p>Présence de mamelles (petits points roses) et croupe plus arrondie.</p>
               </div>
             </div>
 
             <div className="bg-blue-50 p-4 rounded-xl border border-blue-100 text-sm italic shadow-inner">
-              💡 Le conseil du papa : Placez l'animal dans un bocal en verre transparent pour observer son ventre en toute sécurité and sans le stresser.
+              💡 Le conseil du papa : Placez l'animal dans un bocal en verre transparent pour observer son ventre en toute sécurité et sans le stresser.
             </div>
           </div>
         </div>
@@ -376,7 +376,7 @@ const Website = () => {
               </li>
               <li className="flex items-start bg-white p-3 rounded-lg border border-stone-100 shadow-sm">
                 <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
-                <p className="text-sm"><strong>Un compagnon actif :</strong> Bien que docile, il reste un animal vif qui adore courir and creuser, offrant un spectacle fascinant pour l'observation.</p>
+                <p className="text-sm"><strong>Un compagnon actif :</strong> Bien que docile, il reste un animal vif qui adore courir et creuser, offrant un spectacle fascinant pour l'observation.</p>
               </li>
               <li className="flex items-start bg-white p-3 rounded-lg border border-stone-100 shadow-sm">
                 <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
