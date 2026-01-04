@@ -292,17 +292,100 @@ const Website = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="bg-white p-3 rounded-lg border border-stone-100 text-sm shadow-sm">
                 <p className="font-bold mb-1 underline decoration-amber-500 underline-offset-4">Chez le mâle :</p>
-                <p>Glande ventrale visible au milieu du ventre (nombril) et croupe plus pointue.</p>
+                <p>Glande ventrale visible au milieu du ventre (nombril) and croupe plus pointue.</p>
               </div>
               <div className="bg-white p-3 rounded-lg border border-stone-100 text-sm shadow-sm">
                 <p className="font-bold mb-1 underline decoration-pink-500 underline-offset-4">Chez la femelle :</p>
-                <p>Présence de mamelles (petits points roses) et croupe plus arrondie.</p>
+                <p>Présence de mamelles (petits points roses) and croupe plus arrondie.</p>
               </div>
             </div>
 
             <div className="bg-blue-50 p-4 rounded-xl border border-blue-100 text-sm italic shadow-inner">
-              💡 Le conseil du papa : Placez l'animal dans un bocal en verre transparent pour observer son ventre en toute sécurité et sans le stresser.
+              💡 Le conseil du papa : Placez l'animal dans un bocal en verre transparent pour observer son ventre en toute sécurité and sans le stresser.
             </div>
+          </div>
+        </div>
+      )
+    },
+    {
+      question: "Comparatif des Espèces : Pourquoi choisir le Hamster Russe ?",
+      answer: (
+        <div className="space-y-6 text-gray-700">
+          <p>
+            Choisir un premier petit compagnon est un acte qui engage toute la famille dans une démarche de responsabilité and de respect de la vie. Nous croyons que cette rencontre doit être guidée par la connaissance des spécificités de chaque espèce pour assurer une harmonie durable au sein du foyer.
+          </p>
+
+          <div className="overflow-x-auto rounded-xl border border-stone-200 shadow-sm">
+            <table className="min-w-full border-collapse bg-white text-sm">
+              <thead className="bg-amber-50 text-amber-900 text-left">
+                <tr>
+                  <th className="px-4 py-3 font-bold border-b border-stone-200">Espèce</th>
+                  <th className="px-4 py-3 font-bold border-b border-stone-200">Taille</th>
+                  <th className="px-4 py-3 font-bold border-b border-stone-200">Caractère dominant</th>
+                  <th className="px-4 py-3 font-bold border-b border-stone-200 text-center">Aptitude familles</th>
+                </tr>
+              </thead>
+              <tbody className="text-gray-600">
+                <tr className="bg-amber-100/30">
+                  <td className="px-4 py-3 font-bold text-amber-900 border-b border-stone-200 italic font-serif">Hamster Russe</td>
+                  <td className="px-4 py-3 border-b border-stone-200">Petit (Nain)</td>
+                  <td className="px-4 py-3 border-b border-stone-200">Calme, stable and docile</td>
+                  <td className="px-4 py-3 border-b border-stone-200 text-center font-bold text-green-700">Excellente (Le plus facile)</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-3 border-b border-stone-200 font-medium">Hamster Syrien</td>
+                  <td className="px-4 py-3 border-b border-stone-200">Grand</td>
+                  <td className="px-4 py-3 border-b border-stone-200">Affectueux and manipulable</td>
+                  <td className="px-4 py-3 border-b border-stone-200 text-center">Très bonne</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-3 border-b border-stone-200 font-medium">Hamster Chinois</td>
+                  <td className="px-4 py-3 border-b border-stone-200">Moyen</td>
+                  <td className="px-4 py-3 border-b border-stone-200">Timide and docile</td>
+                  <td className="px-4 py-3 border-b border-stone-200 text-center">Bonne (mais vif)</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-3 border-b border-stone-200 font-medium">Hamster de Campbell</td>
+                  <td className="px-4 py-3 border-b border-stone-200">Petit</td>
+                  <td className="px-4 py-3 border-b border-stone-200">Agressif and peu sociable</td>
+                  <td className="px-4 py-3 border-b border-stone-200 text-center text-red-600">Déconseillée</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-3 border-b border-stone-200 font-medium text-xs">Hamster de Roborovski</td>
+                  <td className="px-4 py-3 border-b border-stone-200 text-xs">Très petit</td>
+                  <td className="px-4 py-3 border-b border-stone-200 text-xs text-nowrap">Sauvage and craintif</td>
+                  <td className="px-4 py-3 border-b border-stone-200 text-center text-xs">Difficile (trop rapide)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div className="space-y-4">
+            <h4 className="font-bold text-amber-900 text-lg">Les atouts du Hamster Russe</h4>
+            <p className="text-sm">
+              Le hamster russe est, selon notre expérience, le choix de l'excellence pour un premier apprivoisement. Voici pourquoi nous avons choisi de nous consacrer exclusivement à cette race :
+            </p>
+            <ul className="space-y-3">
+              <li className="flex items-start bg-white p-3 rounded-lg border border-stone-100 shadow-sm">
+                <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
+                <p className="text-sm"><strong>Le tempérament le plus docile :</strong> C’est l’espèce la plus facile à apprivoser de tous les hamsters domestiques.</p>
+              </li>
+              <li className="flex items-start bg-white p-3 rounded-lg border border-stone-100 shadow-sm">
+                <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
+                <p className="text-sm"><strong>Une stabilité exemplaire :</strong> Il se montre particulièrement calme lors des manipulations, ce qui est rassurant pour les débutants.</p>
+              </li>
+              <li className="flex items-start bg-white p-3 rounded-lg border border-stone-100 shadow-sm">
+                <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
+                <p className="text-sm"><strong>Un compagnon actif :</strong> Bien que docile, il reste un animal vif qui adore courir and creuser, offrant un spectacle fascinant pour l'observation.</p>
+              </li>
+              <li className="flex items-start bg-white p-3 rounded-lg border border-stone-100 shadow-sm">
+                <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
+                <p className="text-sm"><strong>Une beauté sauvage :</strong> On le reconnaît à son dos rayé caractéristique, dont la couleur peut changer selon les saisons.</p>
+              </li>
+            </ul>
+            <p className="text-sm italic bg-amber-50 p-4 rounded-xl border border-amber-100 border-l-4 border-l-amber-500">
+              <strong>Notre engagement familial :</strong> Grâce au travail quotidien de sociabilisation réalisé par nos enfants, nos bébés hamsters russes arrivent dans votre foyer déjà habitués à la douceur humaine, ce qui renforce leur docilité naturelle.
+            </p>
           </div>
         </div>
       )
