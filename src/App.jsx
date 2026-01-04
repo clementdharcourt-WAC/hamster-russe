@@ -325,6 +325,7 @@ const Website = () => {
               <a href="#accueil" className="text-gray-600 hover:text-amber-600 px-3 py-2 text-sm font-medium transition">Accueil</a>
               <a href="#souche" className="text-gray-600 hover:text-amber-600 px-3 py-2 text-sm font-medium transition">Lignée Pure</a>
               <a href="#famille" className="text-gray-600 hover:text-amber-600 px-3 py-2 text-sm font-medium transition">Élevage Familial</a>
+              <a href="#galerie" className="text-gray-600 hover:text-amber-600 px-3 py-2 text-sm font-medium transition">Galerie</a>
               <a href="#conseils" className="text-gray-600 hover:text-amber-600 px-3 py-2 text-sm font-medium transition">Guide Expert</a>
               <a href="#faq" onClick={(e) => { e.preventDefault(); scrollToFaq(8); }} className="text-gray-600 hover:text-amber-600 px-3 py-2 text-sm font-medium transition">Mâle ou Femelle</a>
               <a href="#faq" className="text-gray-600 hover:text-amber-600 px-3 py-2 text-sm font-medium transition">FAQ</a>
@@ -344,6 +345,7 @@ const Website = () => {
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
               <a href="#accueil" onClick={toggleMenu} className="block px-3 py-2 text-base font-medium text-gray-700">Accueil</a>
               <a href="#famille" onClick={toggleMenu} className="block px-3 py-2 text-base font-medium text-gray-700">Famille</a>
+              <a href="#galerie" onClick={toggleMenu} className="block px-3 py-2 text-base font-medium text-gray-700">Galerie</a>
               <a href="#conseils" onClick={toggleMenu} className="block px-3 py-2 text-base font-medium text-gray-700">Conseils</a>
               <a href="#faq" onClick={(e) => { e.preventDefault(); toggleMenu(); scrollToFaq(8); }} className="block px-3 py-2 text-base font-medium text-gray-700">Mâle ou Femelle</a>
               <a href="#faq" onClick={toggleMenu} className="block px-3 py-2 text-base font-medium text-gray-700">FAQ</a>
@@ -483,6 +485,41 @@ const Website = () => {
                   </div>
                 </li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Photo Gallery Section */}
+      <section id="galerie" className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-amber-600 font-bold tracking-widest uppercase text-sm mb-4">Instants de vie</h2>
+            <p className="text-4xl font-extrabold text-gray-900 italic">Notre Galerie de Photos</p>
+            <p className="mt-4 text-gray-500">Découvrez nos compagnons dans leur environnement quotidien à Puteaux.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="group relative overflow-hidden rounded-3xl shadow-lg border-4 border-white aspect-video md:aspect-square lg:aspect-video transition hover:shadow-2xl">
+              <img
+                src="/hamster-russe-agouti-1.jpg"
+                alt="Hamster Russe Agouti explorant son aménagement en bois"
+                className="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                <p className="text-white font-medium">Curiosité et exploration</p>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-3xl shadow-lg border-4 border-white aspect-video md:aspect-square lg:aspect-video transition hover:shadow-2xl">
+              <img
+                src="/hamster-russe-agouti-2.jpg"
+                alt="Hamster Russe pure lignée Agouti dans son habitat"
+                className="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                <p className="text-white font-medium">Moment de repos et sérénité</p>
+              </div>
             </div>
           </div>
         </div>
