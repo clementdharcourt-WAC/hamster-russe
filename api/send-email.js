@@ -14,9 +14,14 @@ export default async function handler(req, res) {
     }
 
     try {
+        const fromAddress = process.env.VERIFIED_DOMAIN_EMAIL || 'onboarding@resend.dev';
+        const toAddress = process.env.CONTACT_EMAIL || 'votre@email.com';
+
+        console.log(`Tentative d'envoi d'email de ${fromAddress} vers ${toAddress}`);
+
         const data = await resend.emails.send({
-            from: 'Hamster-russe.com <onboarding@resend.dev>', // Sera mis à jour après vérification du domaine
-            to: [process.env.CONTACT_EMAIL || 'votre@email.com'], // Email de réception
+            from: `Hamster-russe.com <${fromAddress}>`,
+            to: [toAddress],
             subject: `🐹 Nouvelle demande d'adoption de ${name}`,
             html: `
         <h2>Nouvelle demande d'adoption</h2>
@@ -27,8 +32,10 @@ export default async function handler(req, res) {
       `,
         });
 
+        console.log('Email envoyé avec succès:', data);
         return res.status(200).json({ success: true, data });
     } catch (error) {
+        console.error('Erreur API Resend:', error);
         return res.status(500).json({ error: error.message });
     }
 }
