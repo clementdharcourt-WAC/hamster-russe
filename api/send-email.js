@@ -58,7 +58,7 @@ export default async function handler(req, res) {
                         <p><strong>Votre message :</strong><br>${message.replace(/\n/g, '<br>')}</p>
                     </div>
 
-                    <p style="margin-top: 20px;">À très bientôt,<br><strong>La famille d'Harcourt</strong><br><em>Elevage familial de Hamsters Russes à Puteaux</em></p>
+                    <p style="margin-top: 20px;">À très bientôt,<br><strong>La famille Hamster</strong><br><em>Elevage familial de Hamsters Russes à Puteaux</em></p>
                     <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;">
                     <p style="font-size: 12px; color: #666;">Ceci est un message automatique, vous pouvez nous répondre directement sur cet email si besoin.</p>
                 </div>
