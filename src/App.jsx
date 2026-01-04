@@ -4,8 +4,8 @@ import { Heart, MapPin, Info, CheckCircle, AlertCircle, Menu, X, ArrowRight, Shi
 const Website = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [formStatus, setFormStatus] = useState('idle');
-  // Ouvre la première question (Pédagogie) par défaut pour la relecture
-  const [openFaq, setOpenFaq] = useState(0);
+  // Toutes les FAQ fermées par défaut
+  const [openFaq, setOpenFaq] = useState(null);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const toggleFaq = (index) => setOpenFaq(openFaq === index ? null : index);
@@ -42,11 +42,21 @@ const Website = () => {
   };
 
   const scrollToFaq = (index) => {
-    const faqSection = document.getElementById('faq');
-    if (faqSection) {
-      faqSection.scrollIntoView({ behavior: 'smooth' });
-      setOpenFaq(index);
-    }
+    setOpenFaq(index);
+    // On attend un court instant que l'item s'ouvre pour calculer la position
+    setTimeout(() => {
+      const element = document.getElementById(`faq-item-${index}`);
+      if (element) {
+        const headerOffset = 100; // Hauteur du header + marge
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }, 100);
   };
 
   const faqData = [
@@ -735,7 +745,7 @@ const Website = () => {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="py-20 bg-white">
+      <section id="faq" className="py-20 bg-white scroll-mt-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-extrabold text-gray-900">Questions Fréquentes (FAQ)</h2>
@@ -743,7 +753,7 @@ const Website = () => {
           </div>
           <div className="space-y-4">
             {faqData.map((item, index) => (
-              <div key={index} className="bg-stone-50 rounded-xl border border-stone-200 overflow-hidden">
+              <div key={index} id={`faq-item-${index}`} className="bg-stone-50 rounded-xl border border-stone-200 overflow-hidden scroll-mt-24">
                 <button
                   onClick={() => toggleFaq(index)}
                   className="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none bg-white hover:bg-stone-50 transition"
