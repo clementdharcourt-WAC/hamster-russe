@@ -311,6 +311,10 @@ const Website = () => {
 
   return (
     <div className="font-sans text-gray-700 bg-stone-50 min-h-screen flex flex-col">
+      {/* Announcement Bar */}
+      <div className="bg-gray-900 text-amber-400 text-[10px] md:text-xs font-bold py-2.5 px-4 text-center tracking-[0.2em] uppercase z-[60] relative">
+        ✨ Nouvelles portées disponibles à Puteaux — Réservez votre compagnon ✨
+      </div>
       {/* Navigation */}
       <nav className="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -402,23 +406,41 @@ const Website = () => {
       </nav>
 
       {/* Hero Section */}
-      <header id="accueil" className="relative bg-amber-50 overflow-hidden">
-        <div className="max-w-6xl mx-auto px-4 py-16 lg:flex lg:items-center">
+      <header id="accueil" className="relative bg-white overflow-hidden pt-16 pb-24 lg:pt-24 lg:pb-32">
+        <div className="absolute inset-0 bg-[radial-gradient(#fcd34d_0.5px,transparent_0.5px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-20"></div>
+        <div className="max-w-6xl mx-auto px-4 lg:flex lg:items-center relative z-10">
           <div className="lg:w-1/2">
-            <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-              <span className="block">Élevage de Hamster Russe</span>{' '}
-              <span className="block text-amber-600">à Puteaux (92)</span>
+            <div className="inline-flex items-center space-x-2 bg-amber-50 border border-amber-100 px-3 py-1 rounded-full text-amber-700 text-sm font-bold mb-6">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
+              </span>
+              <span>Souche Pure Agouti</span>
+            </div>
+            <h1 className="text-5xl tracking-tighter font-black text-gray-900 sm:text-6xl md:text-7xl leading-[1.1]">
+              Tout l'amour d'un <br />
+              <span className="text-amber-600">Petit Compagnon</span>
             </h1>
-            <p className="mt-6 text-lg text-gray-500 max-w-xl">
-              Adoptez un <strong>hamster russe gris pur</strong> (Agouti), issu d'une lignée authentique. Un élevage fondé sur la transmission et le respect de la vie.
+            <p className="mt-8 text-xl text-gray-600 max-w-xl leading-relaxed">
+              Adoptez un <strong>hamster russe authentique</strong>, élevé avec passion au cœur de notre foyer. Une expérience pédagogique et humaine unique pour toute la famille.
             </p>
-            <div className="mt-8 flex gap-4">
-              <a href="#contact" className="px-8 py-3 bg-amber-600 text-white rounded-md font-bold hover:bg-amber-700 transition">Réserver un bébé</a>
-              <a href="#famille" className="px-8 py-3 bg-amber-100 text-amber-800 rounded-md font-bold hover:bg-amber-200 transition">Notre Histoire</a>
+            <div className="mt-10 flex flex-col sm:flex-row gap-4">
+              <a href="#contact" className="px-10 py-4 bg-gray-900 text-white rounded-2xl font-bold hover:bg-amber-600 transition-all duration-300 shadow-xl flex items-center justify-center group">
+                Réserver un bébé
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
+              <a href="#famille" className="px-10 py-4 bg-white text-gray-900 border-2 border-gray-100 rounded-2xl font-bold hover:border-amber-200 hover:bg-amber-50 transition-all duration-300 flex items-center justify-center">
+                Notre Histoire
+              </a>
             </div>
           </div>
-          <div className="hidden lg:block lg:w-1/2 ml-12">
-            <img src="/hamster-russe-agouti-elevage-puteaux.jpg" alt="Deux adorables hamsters russes agouti dans leur nid - Élevage familial à Puteaux" className="rounded-2xl shadow-2xl" />
+          <div className="hidden lg:block lg:w-1/2 ml-16 relative">
+            <div className="absolute -inset-4 bg-amber-400/20 rounded-[40px] blur-3xl"></div>
+            <img
+              src="/hamster-russe-agouti-elevage-puteaux.jpg"
+              alt="Deux adorables hamsters russes agouti"
+              className="relative rounded-[32px] shadow-2xl border-8 border-white transform hover:scale-[1.02] transition-transform duration-500"
+            />
           </div>
         </div>
       </header>
