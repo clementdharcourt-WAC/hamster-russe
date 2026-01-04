@@ -449,10 +449,10 @@ const Website = () => {
       <section id="souche" className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-base text-amber-600 font-semibold tracking-wide uppercase">Génétique & Authenticité</h2>
-            <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+            <span className="block text-base text-amber-600 font-semibold tracking-wide uppercase mb-2">Génétique & Authenticité</span>
+            <h2 className="text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
               Le Vrai Hamster Russe (Phodopus sungorus)
-            </p>
+            </h2>
             <p className="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
               Nous élevons exclusivement la variété sauvage "Agouti". Une souche saine importée de Russie, sans croisement ni hybridation.
             </p>
@@ -562,8 +562,8 @@ const Website = () => {
       <section id="galerie" className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-amber-600 font-bold tracking-widest uppercase text-sm mb-4">Instants de vie</h2>
-            <p className="text-4xl font-extrabold text-gray-900 italic">Notre Galerie de Photos</p>
+            <span className="block text-amber-600 font-bold tracking-widest uppercase text-sm mb-4">Instants de vie</span>
+            <h2 className="text-4xl font-extrabold text-gray-900 italic">Notre Galerie de Photos</h2>
             <p className="mt-4 text-gray-500">Découvrez nos compagnons dans leur environnement quotidien à Puteaux.</p>
           </div>
 
@@ -597,8 +597,8 @@ const Website = () => {
       <section id="conseils" className="py-20 bg-stone-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-amber-600 font-bold tracking-widest uppercase text-sm mb-4">La transmission familiale</h2>
-            <p className="text-4xl font-extrabold text-gray-900">Le Guide du Petit Gardien</p>
+            <span className="block text-amber-600 font-bold tracking-widest uppercase text-sm mb-4">La transmission familiale</span>
+            <h2 className="text-4xl font-extrabold text-gray-900">Le Guide du Petit Gardien</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
