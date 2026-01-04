@@ -290,6 +290,7 @@ const Website = () => {
               <a href="#famille" className="text-gray-600 hover:text-amber-600 px-3 py-2 text-sm font-medium transition">Élevage Familial</a>
               <a href="#conseils" className="text-gray-600 hover:text-amber-600 px-3 py-2 text-sm font-medium transition">Guide Expert</a>
               <a href="#sexage" className="text-gray-600 hover:text-amber-600 px-3 py-2 text-sm font-medium transition">Mâle ou Femelle ?</a>
+              <a href="#faq" className="text-gray-600 hover:text-amber-600 px-3 py-2 text-sm font-medium transition">FAQ</a>
               <a href="#contact" className="bg-amber-600 text-white hover:bg-amber-700 px-4 py-2 rounded-full text-sm font-medium transition shadow-md">Adopter</a>
             </div>
 
@@ -308,6 +309,7 @@ const Website = () => {
               <a href="#famille" onClick={toggleMenu} className="block px-3 py-2 text-base font-medium text-gray-700">Famille</a>
               <a href="#conseils" onClick={toggleMenu} className="block px-3 py-2 text-base font-medium text-gray-700">Conseils</a>
               <a href="#sexage" onClick={toggleMenu} className="block px-3 py-2 text-base font-medium text-gray-700">Mâle ou Femelle ?</a>
+              <a href="#faq" onClick={toggleMenu} className="block px-3 py-2 text-base font-medium text-gray-700">FAQ</a>
               <a href="#contact" onClick={toggleMenu} className="block px-3 py-2 text-base font-medium text-amber-600 font-bold">Adopter</a>
             </div>
           </div>
