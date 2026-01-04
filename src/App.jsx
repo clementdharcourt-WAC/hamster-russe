@@ -225,6 +225,50 @@ const Website = () => {
     {
       question: "Pourquoi choisir un élevage plutôt qu'une animalerie ?",
       answer: "En animalerie, les hamsters sont souvent issus de croisements intensifs (hybrides), ce qui fragilise leur santé. Notre élevage familial garantit une lignée pure, manipulée quotidiennement par nos enfants, assurant un animal robuste et parfaitement sociabilisé."
+    },
+    {
+      question: "Pourquoi une participation aux frais d'adoption de 20 euros ?",
+      answer: (
+        <div className="space-y-4 text-gray-700">
+          <p>
+            L'accueil d'un nouveau compagnon est un acte responsable. La participation financière de 20 euros demandée lors de l'adoption n'est pas un profit, mais une contribution aux frais réels pour assurer la pérennité de notre élevage familial et la qualité de vie de nos animaux.
+          </p>
+
+          <div className="bg-amber-50 p-4 rounded-lg border border-amber-100">
+            <h4 className="font-bold text-amber-800 mb-2">À quoi sert cette contribution ?</h4>
+            <ul className="list-disc pl-5 space-y-2 text-sm">
+              <li>L'achat d'une alimentation premium équilibrée.</li>
+              <li>Le renouvellement des litières de haute qualité (chanvre ou lin).</li>
+              <li>L'entretien et l'achat de structures d'éveil et de soins.</li>
+              <li>Le soutien à notre passion pour en faire profiter d'autres familles.</li>
+            </ul>
+          </div>
+
+          <div className="border-l-4 border-amber-500 pl-4 py-2 bg-stone-50 rounded-r-lg">
+            <h4 className="font-bold text-gray-900 mb-2">Une barrière éthique pour la protection de la vie</h4>
+            <p className="text-sm text-gray-600 italic">
+              Fixer un montant d'adoption est avant tout une mesure de protection vitale. Cela constitue un rempart éthique indispensable pour éviter l'acquisition de nos hamsters par des éleveurs de serpents ou de reptiles à des fins de nourriture vive. Protéger la Création, c'est s'assurer que chaque petit être rejoint un foyer où il sera aimé et respecté comme un véritable compagnon de vie.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+            <div className="bg-white p-4 rounded-lg border border-gray-100 shadow-sm">
+              <h4 className="font-bold text-gray-900 mb-1 flex items-center">
+                <Clock className="w-4 h-4 mr-2 text-amber-600" />
+                Âge des bébés
+              </h4>
+              <p className="text-sm">Nos hamsters rejoignent leur famille entre 3 et 6 semaines, l'âge idéal pour une sociabilisation parfaite.</p>
+            </div>
+            <div className="bg-white p-4 rounded-lg border border-gray-100 shadow-sm">
+              <h4 className="font-bold text-gray-900 mb-1 flex items-center">
+                <Activity className="w-4 h-4 mr-2 text-amber-600" />
+                Règlement
+              </h4>
+              <p className="text-sm">La participation de 20 euros est réglable exclusivement en espèces lors de la remise en main propre.</p>
+            </div>
+          </div>
+        </div>
+      )
     }
   ];
 
