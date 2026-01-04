@@ -312,7 +312,7 @@ const Website = () => {
       answer: (
         <div className="space-y-6 text-gray-700">
           <p>
-            Choisir un premier petit compagnon est un acte qui engage toute la famille dans une démarche de responsabilité and de respect de la vie. Nous croyons que cette rencontre doit être guidée par la connaissance des spécificités de chaque espèce pour assurer une harmonie durable au sein du foyer.
+            Choisir un premier petit compagnon est un acte qui engage toute la famille dans une démarche de responsabilité et de respect de la vie. Nous croyons que cette rencontre doit être guidée par la connaissance des spécificités de chaque espèce pour assurer une harmonie durable au sein du foyer.
           </p>
 
           <div className="overflow-x-auto rounded-xl border border-stone-200 shadow-sm">
@@ -329,32 +329,32 @@ const Website = () => {
                 <tr className="bg-amber-100/30">
                   <td className="px-4 py-3 font-bold text-amber-900 border-b border-stone-200 italic font-serif">Hamster Russe</td>
                   <td className="px-4 py-3 border-b border-stone-200">Petit (Nain)</td>
-                  <td className="px-4 py-3 border-b border-stone-200">Calme, stable and docile</td>
+                  <td className="px-4 py-3 border-b border-stone-200">Calme, stable et docile</td>
                   <td className="px-4 py-3 border-b border-stone-200 text-center font-bold text-green-700">Excellente (Le plus facile)</td>
                 </tr>
                 <tr>
                   <td className="px-4 py-3 border-b border-stone-200 font-medium">Hamster Syrien</td>
                   <td className="px-4 py-3 border-b border-stone-200">Grand</td>
-                  <td className="px-4 py-3 border-b border-stone-200">Affectueux and manipulable</td>
+                  <td className="px-4 py-3 border-b border-stone-200">Affectueux et manipulable</td>
                   <td className="px-4 py-3 border-b border-stone-200 text-center">Très bonne</td>
                 </tr>
                 <tr>
                   <td className="px-4 py-3 border-b border-stone-200 font-medium">Hamster Chinois</td>
                   <td className="px-4 py-3 border-b border-stone-200">Moyen</td>
-                  <td className="px-4 py-3 border-b border-stone-200">Timide and docile</td>
+                  <td className="px-4 py-3 border-b border-stone-200">Timide et docile</td>
                   <td className="px-4 py-3 border-b border-stone-200 text-center">Bonne (mais vif)</td>
                 </tr>
                 <tr>
                   <td className="px-4 py-3 border-b border-stone-200 font-medium">Hamster de Campbell</td>
                   <td className="px-4 py-3 border-b border-stone-200">Petit</td>
-                  <td className="px-4 py-3 border-b border-stone-200">Agressif and peu sociable</td>
+                  <td className="px-4 py-3 border-b border-stone-200">Agressif et peu sociable</td>
                   <td className="px-4 py-3 border-b border-stone-200 text-center text-red-600">Déconseillée</td>
                 </tr>
                 <tr>
-                  <td className="px-4 py-3 border-b border-stone-200 font-medium text-xs">Hamster de Roborovski</td>
-                  <td className="px-4 py-3 border-b border-stone-200 text-xs">Très petit</td>
-                  <td className="px-4 py-3 border-b border-stone-200 text-xs text-nowrap">Sauvage and craintif</td>
-                  <td className="px-4 py-3 border-b border-stone-200 text-center text-xs">Difficile (trop rapide)</td>
+                  <td className="px-4 py-3 border-b border-stone-200 font-medium">Hamster de Roborovski</td>
+                  <td className="px-4 py-3 border-b border-stone-200">Très petit</td>
+                  <td className="px-4 py-3 border-b border-stone-200">Sauvage et craintif</td>
+                  <td className="px-4 py-3 border-b border-stone-200 text-center">Difficile (trop rapide)</td>
                 </tr>
               </tbody>
             </table>
