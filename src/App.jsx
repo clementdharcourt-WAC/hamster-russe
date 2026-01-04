@@ -545,7 +545,7 @@ const Website = () => {
           </p>
           <div className="bg-white/50 border border-amber-200 rounded-2xl p-6 inline-block">
             <p className="text-sm text-amber-800 font-medium">
-              📍 Remise sur rendez-vous sécurisé : Gare de Puteaux ou Parvis de La Défense.
+              📍 Remise sur rendez-vous sécurisé : Gare de Puteaux.
             </p>
           </div>
         </div>
