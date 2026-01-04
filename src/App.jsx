@@ -418,11 +418,11 @@ const Website = () => {
               <span>Souche Pure Agouti</span>
             </div>
             <h1 className="text-5xl tracking-tighter font-black text-gray-900 sm:text-6xl md:text-7xl leading-[1.1]">
-              Tout l'amour d'un <br />
-              <span className="text-amber-600">Petit Compagnon</span>
+              Élevage de Hamster Russe<br />
+              <span className="text-amber-600">à Puteaux (92)</span>
             </h1>
             <p className="mt-8 text-xl text-gray-600 max-w-xl leading-relaxed">
-              Adoptez un <strong>hamster russe authentique</strong>, élevé avec passion au cœur de notre foyer. Une expérience pédagogique et humaine unique pour toute la famille.
+              Adoptez un <strong>hamster russe gris pur</strong> (Agouti), issu d'une lignée authentique. Un élevage fondé sur la transmission et le respect de la vie.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <a href="#contact" className="px-10 py-4 bg-gray-900 text-white rounded-2xl font-bold hover:bg-amber-600 transition-all duration-300 shadow-xl flex items-center justify-center group">
