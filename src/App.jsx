@@ -508,7 +508,7 @@ const Website = () => {
                 <div className="flex items-start">
                   <Star className="flex-shrink-0 h-6 w-6 text-amber-300 mt-1" />
                   <p className="ml-3 text-base">
-                    <strong>Le Papa (Clément) :</strong> Gestionnaire de la lignée, il veille au respect des standards de la race et à la santé vétérinaire de l'élevage.
+                    <strong>Le Papa :</strong> Gestionnaire de la lignée, il veille au respect des standards de la race et à la santé vétérinaire de l'élevage.
                   </p>
                 </div>
                 <div className="flex items-start">
