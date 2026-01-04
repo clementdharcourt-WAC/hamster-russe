@@ -1,0 +1,39 @@
+Vercel CLI 50.1.3
+The "--limit" option was ignored because it is now deprecated. Please remove it.
+Fetching deployment "hamster-russe-li3l7jpee-clements-projects-c262d289.vercel.app" in clements-projects-c262d289
+Displaying runtime logs for deployment hamster-russe-li3l7jpee-clements-projects-c262d289.vercel.app (dpl_V4VPspzq8GM6jC5k2T59UhTDVYfG) starting from Jan Su 11:21:19.90
+
+waiting for new logs...
+11:22:57.50  ℹ️  POST  ---  hamster-russe.com  ƒ  /api/send-email
+-----------------------------------------------------------------
+Tentative d'envoi d'email de onboarding@resend.dev vers clementdharcourt@gmail.com
+
+waiting for new logs...
+11:22:57.62  ℹ️  POST  ---  hamster-russe.com  ƒ  /api/send-email
+-----------------------------------------------------------------
+Email envoyé avec succès: {
+  data: null,
+  error: {
+    statusCode: 403,
+    name: 'validation_error',
+    message: 'You can only send testing emails to your own email address (clement.dharcourt@idf.washandcheck.fr). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.'
+  },
+  headers: {
+    'cf-cache-status': 'DYNAMIC',
+    'cf-ray': '9b8a0489789f0808-IAD',
+    connection: 'keep-alive',
+    'content-encoding': 'br',
+    'content-type': 'application/json',
+    date: 'Sun, 04 Jan 2026 10:22:57 GMT',
+    'ratelimit-limit': '2',
+    'ratelimit-policy': '2;w=1',
+    'ratelimit-remaining': '1',
+    'ratelimit-reset': '1',
+    server: 'cloudflare',
+    'transfer-encoding': 'chunked',
+    'x-resend-daily-quota': '0',
+    'x-resend-monthly-quota': '0'
+  }
+}
+
+waiting for new logs...
