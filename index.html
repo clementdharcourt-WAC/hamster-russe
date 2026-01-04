@@ -22,49 +22,64 @@
 
   <!-- Données Structurées (JSON-LD) - Essentiel pour Google Gemini/SGE -->
   <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Hamster-russe.com",
-      "image": "https://www.hamster-russe.com/hamster-russe-agouti-elevage-puteaux.jpg",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Puteaux",
-        "postalCode": "92800",
-        "addressRegion": "Hauts-de-Seine",
-        "addressCountry": "FR"
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Hamster-russe.com",
+        "image": "https://www.hamster-russe.com/hamster-russe-agouti-elevage-puteaux.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Puteaux",
+          "postalCode": "92800",
+          "addressRegion": "Hauts-de-Seine",
+          "addressCountry": "FR"
+        },
+        "url": "https://www.hamster-russe.com",
+        "description": "Élevage familial éthique de hamsters russes de lignée pure (Agouti) situé à Puteaux.",
+        "priceRange": "€",
+        "openingHours": "Mo-Su 09:00-19:00",
+        "telephone": "+33100000000",
+        "areaServed": ["Puteaux", "Nanterre", "Suresnes", "Courbevoie", "Rueil-Malmaison", "Neuilly-sur-Seine"]
       },
-      "url": "https://www.hamster-russe.com",
-      "description": "Élevage familial éthique de hamsters russes de lignée pure (Agouti) situé à Puteaux.",
-      "priceRange": "$",
-      "openingHours": "Mo-Su 09:00-19:00",
-      "areaServed": [
-        {
-          "@type": "City",
-          "name": "Puteaux"
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Accueil",
+            "item": "https://www.hamster-russe.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Adopter un Hamster Russe",
+            "item": "https://www.hamster-russe.com#contact"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Adoption Hamster Russe Pur Agouti",
+        "image": "https://www.hamster-russe.com/hamster-russe-agouti-elevage-puteaux.jpg",
+        "description": "Adoption d'un hamster russe issu de lignée pure Agouti. Élevé en famille, sociabilisé et en excellente santé.",
+        "brand": {
+          "@type": "Brand",
+          "name": "Élevage de Puteaux"
         },
-        {
-          "@type": "City",
-          "name": "Nanterre"
-        },
-        {
-          "@type": "City",
-          "name": "Suresnes"
-        },
-        {
-          "@type": "City",
-          "name": "Courbevoie"
-        },
-        {
-          "@type": "City",
-          "name": "Rueil-Malmaison"
-        },
-        {
-          "@type": "City",
-          "name": "Neuilly-sur-Seine"
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.hamster-russe.com#contact",
+          "priceCurrency": "EUR",
+          "price": "20.00",
+          "itemCondition": "https://schema.org/NewCondition",
+          "availability": "https://schema.org/InStock"
         }
-      ]
-    }
+      }
+    ]
     </script>
 </head>
 
