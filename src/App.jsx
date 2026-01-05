@@ -19,7 +19,7 @@ const Website = () => {
     setAnswers({});
   };
 
-  const handleAnswer = (questionId, value) => {
+  const handleQuizAnswer = (questionId, value) => {
     const newAnswers = { ...answers, [questionId]: value };
     setAnswers(newAnswers);
     if (quizStep < 4) {
