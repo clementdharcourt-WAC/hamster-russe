@@ -71,7 +71,7 @@ const Website = () => {
     },
     roborovski: {
       name: "Hamster de Roborovski",
-      image: "https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?auto=format&fit=crop&q=80&w=800",
+      image: "/hamster-roborovski-resultat.jpg",
       desc: "Le plus rapide ! Fascinant à observer, mais moins manipulable.",
       tags: ["Vif", "Petit", "Observateur"]
     },
