@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   build: {
-    minify: 'esbuild',
+    minify: 'terser',
     sourcemap: false,
     rollupOptions: {
       output: {
