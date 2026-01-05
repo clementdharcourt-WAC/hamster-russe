@@ -65,7 +65,7 @@ const Website = () => {
     },
     syrien: {
       name: "Hamster Syrien",
-      image: "https://images.unsplash.com/photo-1452570053594-1b985d6ea890?auto=format&fit=crop&q=80&w=800",
+      image: "/hamster-syrien-resultat.jpg",
       desc: "Grand et affectueux, il demande plus d'espace mais offre une vraie interaction.",
       tags: ["Sociable", "Grand", "Affectueux"]
     },
