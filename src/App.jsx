@@ -29,20 +29,31 @@ const Website = () => {
     }
   };
 
-  const getResult = () => {
-    const { exp, space, char, who } = answers;
+  const getQuizResult = () => {
+    const { level, space, interaction } = answers;
 
-    if (who === 'enfant' || who === 'famille' || exp === 'debutant') {
-      if (char === 'affectueux' && space === 'grand') return 'syrien';
-      return 'russe';
+    // Cas 1 : Débutant ou cherchant le contact (Enfant/Famille)
+    if (level === 'beginner' || interaction === 'handle') {
+      // Si on veut manipuler ET qu'on a beaucoup d'espace => Syrien
+      if (interaction === 'handle' && space === 'big') {
+        return speciesData.syrien;
+      }
+      // Sinon par défaut => Russe (plus facile, moins d'espace requis que le Syrien)
+      return speciesData.russe;
     }
 
-    if (exp === 'expert' || char === 'vif') {
-      if (space === 'petit') return 'roborovski';
-      return 'chinois';
+    // Cas 2 : Expert ou Observateur
+    if (level === 'advanced' || interaction === 'watch') {
+      // Si petit espace (standard) => Roborovski (très vif, petit)
+      if (space === 'standard') {
+        return speciesData.roborovski;
+      }
+      // Si grand espace => Chinois (grimpeur, intéressant à observer)
+      return speciesData.chinois;
     }
 
-    return 'russe';
+    // Fallback sécurité
+    return speciesData.russe;
   };
 
   const speciesData = {
