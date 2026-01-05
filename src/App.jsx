@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Heart, MapPin, Info, CheckCircle, AlertCircle, Menu, X, ArrowRight, ShieldCheck, Globe, Users, Star, Utensils, Moon, Clock, Shield, HelpCircle, ChevronDown, ChevronUp, Hourglass, Hand, Activity, BookOpen, Eye, Smile, GraduationCap, Maximize, Minimize, RefreshCw } from 'lucide-react';
+import { Heart, MapPin, Info, CheckCircle, AlertCircle, Menu, X, ArrowRight, ShieldCheck, Globe, Users, Star, Utensils, Moon, Clock, Shield, HelpCircle, ChevronDown, ChevronUp, Hourglass, Hand, Activity, BookOpen, Eye, Smile, GraduationCap, Maximize, Minimize, RefreshCw, Sparkles } from 'lucide-react';
 
 const Website = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -781,6 +781,30 @@ const Website = () => {
           </div>
 
           <div className="bg-white rounded-[48px] shadow-2xl p-8 md:p-16 border-8 border-amber-50 min-h-[500px] flex flex-col justify-center transition-all duration-500">
+
+            {quizStep === 0 && (
+              <div className="animate-fadeIn text-center">
+                <div className="mb-10 relative inline-block">
+                  <div className="absolute inset-0 bg-amber-400 rounded-full blur-xl opacity-30 animate-pulse"></div>
+                  <div className="bg-amber-100 p-6 rounded-full relative">
+                    <Sparkles className="w-16 h-16 text-amber-600" />
+                  </div>
+                </div>
+                <h3 className="text-2xl md:text-3xl font-black text-gray-900 mb-6">
+                  Quel compagnon est fait pour vous ?
+                </h3>
+                <p className="text-xl text-gray-600 mb-10 max-w-lg mx-auto leading-relaxed">
+                  Répondez à 3 questions simples pour découvrir la variété de hamster qui correspond le mieux à votre style de vie.
+                </p>
+                <button
+                  onClick={() => setQuizStep(1)}
+                  className="px-10 py-5 bg-amber-500 text-white text-xl font-bold rounded-2xl hover:bg-amber-600 hover:scale-105 transition-all duration-300 shadow-xl flex items-center mx-auto"
+                >
+                  Commencer le test
+                  <ArrowRight className="ml-3 w-6 h-6" />
+                </button>
+              </div>
+            )}
 
             {quizStep === 1 && (
               <div className="animate-fadeIn">
