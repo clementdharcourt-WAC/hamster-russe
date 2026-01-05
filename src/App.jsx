@@ -59,27 +59,41 @@ const Website = () => {
   const speciesData = {
     russe: {
       name: "Hamster Russe",
-      image: "/hamster_russe_result_1767561339558.png",
+      image: "https://images.unsplash.com/photo-1425082661705-1834bfd09dca?auto=format&fit=crop&q=80&w=800",
       desc: "Idéal pour les familles et les débutants, il est le plus docile et calme.",
       tags: ["Calme", "Petit", "Docile"]
     },
     syrien: {
       name: "Hamster Syrien",
-      image: "https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&q=80&w=800",
+      image: "https://images.unsplash.com/photo-1452570053594-1b985d6ea890?auto=format&fit=crop&q=80&w=800",
       desc: "Grand et affectueux, il demande plus d'espace mais offre une vraie interaction.",
       tags: ["Sociable", "Grand", "Affectueux"]
     },
     roborovski: {
       name: "Hamster de Roborovski",
-      image: "https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&q=80&w=800",
-      desc: "Très vif et rapide, c'est un animal d'observation fascinant pour les experts.",
-      tags: ["Très Vif", "Minuscule", "Observation"]
+      image: "https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?auto=format&fit=crop&q=80&w=800",
+      desc: "Le plus rapide ! Fascinant à observer, mais moins manipulable.",
+      tags: ["Vif", "Petit", "Observateur"]
     },
     chinois: {
       name: "Hamster Chinois",
-      image: "https://images.unsplash.com/photo-1425082661705-1834bfd09dca?auto=format&fit=crop&q=80&w=800",
-      desc: "Longiligne et agile, il est curieux mais parfois timide.",
-      tags: ["Agile", "Moyen", "Curieux"]
+      image: "https://images.unsplash.com/photo-1502425064560-64251cd60100?auto=format&fit=crop&q=80&w=800",
+      desc: "Un grimpeur agile avec une longue queue, très intelligent.",
+      tags: ["Agile", "Grimpeur", "Intelligent"]
+    }
+  };
+
+  const handleScrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const offset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+      setIsMenuOpen(false);
     }
   };
 
@@ -904,19 +918,19 @@ const Website = () => {
             {quizStep === 4 && (
               <div className="animate-fadeIn text-center">
                 <div className="inline-block bg-amber-50 text-amber-600 px-6 py-2 rounded-full font-bold text-sm tracking-widest uppercase mb-6">Résultat du test</div>
-                <h3 className="text-4xl md:text-5xl font-black text-gray-900 mb-8">{getQuizResult().hamsterName}</h3>
+                <h3 className="text-4xl md:text-5xl font-black text-gray-900 mb-8">{getQuizResult().name}</h3>
                 <div className="bg-stone-50 rounded-3xl p-6 md:p-10 mb-10 flex flex-col md:flex-row items-center gap-10 border border-stone-100 shadow-inner">
                   <div className="relative flex-shrink-0">
                     <div className="absolute inset-0 bg-amber-400 rounded-full blur-2xl opacity-20 animate-pulse"></div>
                     <img
-                      src={getQuizResult().imgUrl}
-                      alt={getQuizResult().hamsterName}
+                      src={getQuizResult().image}
+                      alt={getQuizResult().name}
                       className="relative w-48 h-48 md:w-64 md:h-64 object-cover rounded-full border-8 border-white shadow-2xl"
                     />
                   </div>
                   <div className="text-left flex-1">
                     <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-medium mb-6 italic">
-                      "{getQuizResult().description}"
+                      "{getQuizResult().desc}"
                     </p>
                     <div className="flex flex-wrap gap-4">
                       {getQuizResult().isRussianHamster ? (
