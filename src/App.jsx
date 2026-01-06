@@ -77,7 +77,7 @@ const Website = () => {
     },
     chinois: {
       name: "Hamster Chinois",
-      image: "/hamster-chinois-resultat.jpg",
+      image: "/hamster-chinois-final.jpg",
       desc: "Un grimpeur agile avec une longue queue, très intelligent.",
       tags: ["Agile", "Grimpeur", "Intelligent"]
     }
