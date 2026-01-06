@@ -77,7 +77,7 @@ const Website = () => {
     },
     chinois: {
       name: "Hamster Chinois",
-      image: "https://images.unsplash.com/photo-1502425064560-64251cd60100?auto=format&fit=crop&q=80&w=800",
+      image: "/hamster-chinois-resultat.jpg",
       desc: "Un grimpeur agile avec une longue queue, très intelligent.",
       tags: ["Agile", "Grimpeur", "Intelligent"]
     }
