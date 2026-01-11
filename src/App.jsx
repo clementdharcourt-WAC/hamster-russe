@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Heart, MapPin, Info, CheckCircle, AlertCircle, Menu, X, ArrowRight, ShieldCheck, Globe, Users, Star, Utensils, Moon, Clock, Shield, HelpCircle, ChevronDown, ChevronUp, Hourglass, Hand, Activity, BookOpen, Eye, Smile, GraduationCap, Maximize, Minimize, RefreshCw, Sparkles } from 'lucide-react';
+import { Heart, MapPin, Info, CheckCircle, Menu, X, ArrowRight, ShieldCheck, Globe, Users, Star, Utensils, Shield, ChevronDown, ChevronUp, Hand, BookOpen } from 'lucide-react';
 
 const Website = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -7,81 +7,9 @@ const Website = () => {
   // Toutes les FAQ fermées par défaut
   const [openFaq, setOpenFaq] = useState(null);
 
-  // State pour le Quiz
-  const [quizStep, setQuizStep] = useState(0); // 0 = intro, 1-4 = questions, 5 = résultat
-  const [answers, setAnswers] = useState({});
-
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const toggleFaq = (index) => setOpenFaq(openFaq === index ? null : index);
 
-  const resetQuiz = () => {
-    setQuizStep(1);
-    setAnswers({});
-  };
-
-  const handleQuizAnswer = (questionId, value) => {
-    const newAnswers = { ...answers, [questionId]: value };
-    setAnswers(newAnswers);
-    if (quizStep < 4) {
-      setQuizStep(quizStep + 1);
-    } else {
-      setQuizStep(5);
-    }
-  };
-
-  const getQuizResult = () => {
-    const { level, space, interaction } = answers;
-
-    // Cas 1 : Débutant ou cherchant le contact (Enfant/Famille)
-    if (level === 'beginner' || interaction === 'handle') {
-      // Si on veut manipuler ET qu'on a beaucoup d'espace => Syrien
-      if (interaction === 'handle' && space === 'big') {
-        return speciesData.syrien;
-      }
-      // Sinon par défaut => Russe (plus facile, moins d'espace requis que le Syrien)
-      return speciesData.russe;
-    }
-
-    // Cas 2 : Expert ou Observateur
-    if (level === 'advanced' || interaction === 'watch') {
-      // Si petit espace (standard) => Roborovski (très vif, petit)
-      if (space === 'standard') {
-        return speciesData.roborovski;
-      }
-      // Si grand espace => Chinois (grimpeur, intéressant à observer)
-      return speciesData.chinois;
-    }
-
-    // Fallback sécurité
-    return speciesData.russe;
-  };
-
-  const speciesData = {
-    russe: {
-      name: "Hamster Russe",
-      image: "https://images.unsplash.com/photo-1425082661705-1834bfd09dca?auto=format&fit=crop&q=80&w=800",
-      desc: "Idéal pour les familles et les débutants, il est le plus docile et calme.",
-      tags: ["Calme", "Petit", "Docile"]
-    },
-    syrien: {
-      name: "Hamster Syrien",
-      image: "/hamster-syrien-resultat.jpg",
-      desc: "Grand et affectueux, il demande plus d'espace mais offre une vraie interaction.",
-      tags: ["Sociable", "Grand", "Affectueux"]
-    },
-    roborovski: {
-      name: "Hamster de Roborovski",
-      image: "/hamster-roborovski-resultat.jpg",
-      desc: "Le plus rapide ! Fascinant à observer, mais moins manipulable.",
-      tags: ["Vif", "Petit", "Observateur"]
-    },
-    chinois: {
-      name: "Hamster Chinois",
-      image: "/hamster-chinois-final.jpg",
-      desc: "Un grimpeur agile avec une longue queue, très intelligent.",
-      tags: ["Agile", "Grimpeur", "Intelligent"]
-    }
-  };
 
   const handleScrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -689,7 +617,7 @@ const Website = () => {
                 { name: 'Lignée Pure', href: '#souche' },
                 { name: 'Élevage', href: '#famille' },
                 { name: 'Galerie', href: '#galerie' },
-                { name: 'Test', href: '#test' },
+                { name: 'Avis', href: '#avis' },
                 { name: 'Guide', href: '#conseils' },
                 { name: 'FAQ', href: '#faq' },
               ].map((link) => (
@@ -729,7 +657,7 @@ const Website = () => {
               { name: 'Lignée Pure', href: '#souche' },
               { name: 'Élevage Familial', href: '#famille' },
               { name: 'Galerie Photos', href: '#galerie' },
-              { name: 'Test : Quel Hamster ?', href: '#test' },
+              { name: 'Témoignages', href: '#avis' },
               { name: 'Guide Expert', href: '#conseils' },
               { name: 'FAQ', href: '#faq' },
             ].map((link) => (
@@ -793,165 +721,57 @@ const Website = () => {
         </div>
       </header>
 
-      {/* Quiz Section */}
-      <section id="test" className="py-24 bg-stone-50 overflow-hidden relative">
-        <div className="absolute top-0 right-0 -translate-y-12 translate-x-12 w-96 h-96 bg-amber-200/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 translate-y-12 -translate-x-12 w-96 h-96 bg-amber-100/20 rounded-full blur-3xl"></div>
-
-        <div className="max-w-4xl mx-auto px-4 relative z-10">
-          <div className="text-center mb-12">
-            <span className="bg-amber-100 text-amber-700 px-4 py-1.5 rounded-full text-sm font-bold tracking-wider uppercase mb-4 inline-block">Interactif</span>
-            <h2 className="text-4xl md:text-5xl font-black text-gray-900 tracking-tighter">Quel Hamster Choisir ?</h2>
-            <p className="mt-4 text-xl text-gray-600">Trouvez votre petit compagnon idéal en 3 questions.</p>
+      {/* Testimonials Section */}
+      <section id="avis" className="py-24 bg-stone-50 overflow-hidden relative">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="block text-amber-600 font-bold tracking-widest uppercase text-sm mb-4">Confiance & Bonheur</span>
+            <h2 className="text-4xl font-extrabold text-gray-900">Ils ont adopté un compagnon</h2>
+            <p className="mt-4 text-gray-500">Découvrez les retours de nos familles adoptantes à Puteaux et aux alentours.</p>
           </div>
 
-          <div className="bg-white rounded-[48px] shadow-2xl p-8 md:p-16 border-8 border-amber-50 min-h-[500px] flex flex-col justify-center transition-all duration-500">
-
-            {quizStep === 0 && (
-              <div className="animate-fadeIn text-center">
-                <div className="mb-10 relative inline-block">
-                  <div className="absolute inset-0 bg-amber-400 rounded-full blur-xl opacity-30 animate-pulse"></div>
-                  <div className="bg-amber-100 p-6 rounded-full relative">
-                    <Sparkles className="w-16 h-16 text-amber-600" />
-                  </div>
-                </div>
-                <h3 className="text-2xl md:text-3xl font-black text-gray-900 mb-6">
-                  Quel compagnon est fait pour vous ?
-                </h3>
-                <p className="text-xl text-gray-600 mb-10 max-w-lg mx-auto leading-relaxed">
-                  Répondez à 3 questions simples pour découvrir la variété de hamster qui correspond le mieux à votre style de vie.
-                </p>
-                <button
-                  onClick={() => setQuizStep(1)}
-                  className="px-10 py-5 bg-amber-500 text-white text-xl font-bold rounded-2xl hover:bg-amber-600 hover:scale-105 transition-all duration-300 shadow-xl flex items-center mx-auto"
-                >
-                  Commencer le test
-                  <ArrowRight className="ml-3 w-6 h-6" />
-                </button>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-[32px] shadow-sm border border-stone-100 relative group hover:shadow-xl transition-all duration-300">
+              <div className="flex text-amber-400 mb-4">
+                {[...Array(5)].map((_, i) => <Star key={i} size={18} fill="currentColor" />)}
               </div>
-            )}
-
-            {quizStep === 1 && (
-              <div className="animate-fadeIn">
-                <h3 className="text-2xl md:text-3xl font-black text-center mb-12 text-gray-900">1. Que recherchez-vous avant tout ?</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <button
-                    onClick={() => handleQuizAnswer('interaction', 'handle', 2)}
-                    className="group p-8 border-4 border-amber-50 rounded-[32px] hover:border-amber-400 hover:bg-amber-50/50 transition-all duration-300 flex flex-col items-center text-center space-y-6"
-                  >
-                    <div className="bg-amber-100 p-6 rounded-2xl group-hover:bg-amber-600 transition-colors duration-300">
-                      <Hand className="w-12 h-12 text-amber-600 group-hover:text-white transition-colors duration-300" />
-                    </div>
-                    <span className="font-black text-xl text-gray-900">Le manipuler & faire des câlins</span>
-                  </button>
-                  <button
-                    onClick={() => handleQuizAnswer('interaction', 'watch', 2)}
-                    className="group p-8 border-4 border-amber-50 rounded-[32px] hover:border-amber-400 hover:bg-amber-50/50 transition-all duration-300 flex flex-col items-center text-center space-y-6"
-                  >
-                    <div className="bg-amber-100 p-6 rounded-2xl group-hover:bg-amber-600 transition-colors duration-300">
-                      <Eye className="w-12 h-12 text-amber-600 group-hover:text-white transition-colors duration-300" />
-                    </div>
-                    <span className="font-black text-xl text-gray-900">L'observer vivre sa vie</span>
-                  </button>
+              <p className="text-gray-600 italic mb-6">"Une expérience merveilleuse ! Nos enfants sont ravis. Le hamster est incroyablement doux et n'a jamais montré de signe d'agressivité. Merci pour vos précieux conseils."</p>
+              <div className="flex items-center">
+                <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center text-amber-600 font-bold mr-4">S</div>
+                <div>
+                  <p className="font-black text-gray-900">Sophie D.</p>
+                  <p className="text-xs text-gray-500">Adopté en Octobre 2025</p>
                 </div>
               </div>
-            )}
+            </div>
 
-            {quizStep === 2 && (
-              <div className="animate-fadeIn">
-                <h3 className="text-2xl md:text-3xl font-black text-center mb-12 text-gray-900">2. Quel est votre niveau d'expérience ?</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <button
-                    onClick={() => handleQuizAnswer('level', 'beginner', 3)}
-                    className="group p-8 border-4 border-amber-50 rounded-[32px] hover:border-amber-400 hover:bg-amber-50/50 transition-all duration-300 flex flex-col items-center text-center space-y-6"
-                  >
-                    <div className="bg-green-100 p-6 rounded-2xl group-hover:bg-green-600 transition-colors duration-300">
-                      <Smile className="w-12 h-12 text-green-600 group-hover:text-white transition-colors duration-300" />
-                    </div>
-                    <span className="font-black text-xl text-gray-900">Débutant / Enfants</span>
-                  </button>
-                  <button
-                    onClick={() => handleQuizAnswer('level', 'advanced', 3)}
-                    className="group p-8 border-4 border-amber-50 rounded-[32px] hover:border-amber-400 hover:bg-amber-50/50 transition-all duration-300 flex flex-col items-center text-center space-y-6"
-                  >
-                    <div className="bg-blue-100 p-6 rounded-2xl group-hover:bg-blue-600 transition-colors duration-300">
-                      <GraduationCap className="w-12 h-12 text-blue-600 group-hover:text-white transition-colors duration-300" />
-                    </div>
-                    <span className="font-black text-xl text-gray-900">Connaisseur</span>
-                  </button>
+            <div className="bg-white p-8 rounded-[32px] shadow-sm border border-stone-100 relative group hover:shadow-xl transition-all duration-300 transform md:-translate-y-4">
+              <div className="flex text-amber-400 mb-4">
+                {[...Array(5)].map((_, i) => <Star key={i} size={18} fill="currentColor" />)}
+              </div>
+              <p className="text-gray-600 italic mb-6">"On sent vraiment que c'est un élevage familial. Le petit 'Bibi' était déjà habitué aux mains, ce qui a facilité son intégration à la maison. Je recommande à 100%."</p>
+              <div className="flex items-center">
+                <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center text-amber-600 font-bold mr-4">M</div>
+                <div>
+                  <p className="font-black text-gray-900">Marc-Antoine</p>
+                  <p className="text-xs text-gray-500">Adopté en Décembre 2025</p>
                 </div>
               </div>
-            )}
+            </div>
 
-            {quizStep === 3 && (
-              <div className="animate-fadeIn">
-                <h3 className="text-2xl md:text-3xl font-black text-center mb-12 text-gray-900">3. Quel espace avez-vous pour la cage ?</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <button
-                    onClick={() => handleQuizAnswer('space', 'big', 4)}
-                    className="group p-8 border-4 border-amber-50 rounded-[32px] hover:border-amber-400 hover:bg-amber-50/50 transition-all duration-300 flex flex-col items-center text-center space-y-6"
-                  >
-                    <div className="bg-amber-100 p-6 rounded-2xl group-hover:bg-amber-600 transition-colors duration-300">
-                      <Maximize className="w-12 h-12 text-amber-600 group-hover:text-white transition-colors duration-300" />
-                    </div>
-                    <div>
-                      <span className="block font-black text-xl text-gray-900">Très grande cage</span>
-                      <span className="text-sm text-gray-500 font-medium">+ 80cm de large</span>
-                    </div>
-                  </button>
-                  <button
-                    onClick={() => handleQuizAnswer('space', 'standard', 4)}
-                    className="group p-8 border-4 border-amber-50 rounded-[32px] hover:border-amber-400 hover:bg-amber-50/50 transition-all duration-300 flex flex-col items-center text-center space-y-6"
-                  >
-                    <div className="bg-amber-100 p-6 rounded-2xl group-hover:bg-amber-600 transition-colors duration-300">
-                      <Minimize className="w-12 h-12 text-amber-600 group-hover:text-white transition-colors duration-300" />
-                    </div>
-                    <div>
-                      <span className="block font-black text-xl text-gray-900">Espace standard</span>
-                      <span className="text-sm text-gray-500 font-medium">70-80cm de large</span>
-                    </div>
-                  </button>
+            <div className="bg-white p-8 rounded-[32px] shadow-sm border border-stone-100 relative group hover:shadow-xl transition-all duration-300">
+              <div className="flex text-amber-400 mb-4">
+                {[...Array(5)].map((_, i) => <Star key={i} size={18} fill="currentColor" />)}
+              </div>
+              <p className="text-gray-600 italic mb-6">"L'accueil à Puteaux a été très pédagogique pour ma fille. Elle a appris les bons gestes avant même de repartir avec son nouveau petit ami. Un grand merci !"</p>
+              <div className="flex items-center">
+                <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center text-amber-600 font-bold mr-4">L</div>
+                <div>
+                  <p className="font-black text-gray-900">Laetitia</p>
+                  <p className="text-xs text-gray-500">Adopté en Novembre 2025</p>
                 </div>
               </div>
-            )}
-
-            {quizStep === 4 && (
-              <div className="animate-fadeIn text-center">
-                <div className="inline-block bg-amber-50 text-amber-600 px-6 py-2 rounded-full font-bold text-sm tracking-widest uppercase mb-6">Résultat du test</div>
-                <h3 className="text-4xl md:text-5xl font-black text-gray-900 mb-8">{getQuizResult().name}</h3>
-                <div className="bg-stone-50 rounded-3xl p-6 md:p-10 mb-10 flex flex-col md:flex-row items-center gap-10 border border-stone-100 shadow-inner">
-                  <div className="relative flex-shrink-0">
-                    <div className="absolute inset-0 bg-amber-400 rounded-full blur-2xl opacity-20 animate-pulse"></div>
-                    <img
-                      src={getQuizResult().image}
-                      alt={getQuizResult().name}
-                      className="relative w-48 h-48 md:w-64 md:h-64 object-cover rounded-full border-8 border-white shadow-2xl"
-                    />
-                  </div>
-                  <div className="text-left flex-1">
-                    <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-medium mb-6 italic">
-                      "{getQuizResult().desc}"
-                    </p>
-                    <div className="flex flex-wrap gap-4">
-                      {getQuizResult().isRussianHamster ? (
-                        <a href="#contact" className="px-8 py-3 bg-gray-900 text-white rounded-xl font-bold hover:bg-amber-600 transition shadow-lg">Adopter ce hamster</a>
-                      ) : (
-                        <div className="w-full bg-amber-50 border border-amber-100 p-4 rounded-xl mb-2">
-                          <p className="text-amber-800 text-sm font-medium flex items-start">
-                            <Info className="w-5 h-5 mr-2 flex-shrink-0 mt-0.5" />
-                            Note : Notre élevage familial est exclusivement spécialisé dans le Hamster Russe (lignée pure). Nous ne proposons pas d'autres espèces à l'adoption.
-                          </p>
-                        </div>
-                      )}
-                      <button onClick={resetQuiz} className="px-8 py-3 bg-white text-gray-600 border-2 border-stone-200 rounded-xl font-bold hover:bg-stone-50 transition flex items-center">
-                        <RefreshCw className="w-5 h-5 mr-2" />
-                        Refaire le test
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
+            </div>
           </div>
         </div>
       </section>
