@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Heart, MapPin, Info, CheckCircle, Menu, X, ArrowRight, ShieldCheck, Globe, Users, Star, Utensils, Shield, ChevronDown, ChevronUp, Hand, BookOpen } from 'lucide-react';
+import { Heart, MapPin, Info, CheckCircle, Menu, X, ArrowRight, ShieldCheck, Globe, Users, Star, Utensils, Shield, ChevronDown, ChevronUp, Hand, BookOpen, Clock, Activity } from 'lucide-react';
 
 const Website = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
