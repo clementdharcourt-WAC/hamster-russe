@@ -458,9 +458,9 @@ const Website = () => {
                 { name: 'Lignée Pure', href: '#souche' },
                 { name: 'Élevage', href: '#famille' },
                 { name: 'Galerie', href: '#galerie' },
-                { name: 'Avis', href: '#avis' },
                 { name: 'Guide', href: '#conseils' },
                 { name: 'FAQ', href: '#faq' },
+                { name: 'Avis', href: '#avis' },
               ].map((link) => (
                 <a
                   key={link.name}
@@ -498,9 +498,9 @@ const Website = () => {
               { name: 'Lignée Pure', href: '#souche' },
               { name: 'Élevage Familial', href: '#famille' },
               { name: 'Galerie Photos', href: '#galerie' },
-              { name: 'Témoignages', href: '#avis' },
               { name: 'Guide Expert', href: '#conseils' },
               { name: 'FAQ', href: '#faq' },
+              { name: 'Témoignages', href: '#avis' },
             ].map((link) => (
               <a
                 key={link.name}
@@ -562,60 +562,6 @@ const Website = () => {
         </div>
       </header>
 
-      {/* Testimonials Section */}
-      <section id="avis" className="py-24 bg-stone-50 overflow-hidden relative">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="block text-amber-600 font-bold tracking-widest uppercase text-sm mb-4">Confiance & Bonheur</span>
-            <h2 className="text-4xl font-extrabold text-gray-900">Ils ont adopté un compagnon</h2>
-            <p className="mt-4 text-gray-500">Découvrez les retours de nos familles adoptantes à Puteaux et aux alentours.</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-[32px] shadow-sm border border-stone-100 relative group hover:shadow-xl transition-all duration-300">
-              <div className="flex text-amber-400 mb-4">
-                {[...Array(5)].map((_, i) => <Star key={i} size={18} fill="currentColor" />)}
-              </div>
-              <p className="text-gray-600 italic mb-6">"Une expérience merveilleuse ! Nos enfants sont ravis. Le hamster est incroyablement doux et n'a jamais montré de signe d'agressivité. Merci pour vos précieux conseils."</p>
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center text-amber-600 font-bold mr-4">S</div>
-                <div>
-                  <p className="font-black text-gray-900">Sophie D.</p>
-                  <p className="text-xs text-gray-500">Adopté en Octobre 2025</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white p-8 rounded-[32px] shadow-sm border border-stone-100 relative group hover:shadow-xl transition-all duration-300 transform md:-translate-y-4">
-              <div className="flex text-amber-400 mb-4">
-                {[...Array(5)].map((_, i) => <Star key={i} size={18} fill="currentColor" />)}
-              </div>
-              <p className="text-gray-600 italic mb-6">"On sent vraiment que c'est un élevage familial. Le petit 'Bibi' était déjà habitué aux mains, ce qui a facilité son intégration à la maison. Je recommande à 100%."</p>
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center text-amber-600 font-bold mr-4">M</div>
-                <div>
-                  <p className="font-black text-gray-900">Marc-Antoine</p>
-                  <p className="text-xs text-gray-500">Adopté en Décembre 2025</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white p-8 rounded-[32px] shadow-sm border border-stone-100 relative group hover:shadow-xl transition-all duration-300">
-              <div className="flex text-amber-400 mb-4">
-                {[...Array(5)].map((_, i) => <Star key={i} size={18} fill="currentColor" />)}
-              </div>
-              <p className="text-gray-600 italic mb-6">"L'accueil à Puteaux a été très pédagogique pour ma fille. Elle a appris les bons gestes avant même de repartir avec son nouveau petit ami. Un grand merci !"</p>
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center text-amber-600 font-bold mr-4">L</div>
-                <div>
-                  <p className="font-black text-gray-900">Laetitia</p>
-                  <p className="text-xs text-gray-500">Adopté en Novembre 2025</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Origin Section */}
       <section id="souche" className="py-16 bg-white">
@@ -868,6 +814,62 @@ const Website = () => {
           </div>
         </div>
       </section>
+
+      {/* Testimonials Section */}
+      <section id="avis" className="py-24 bg-stone-50 overflow-hidden relative">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="block text-amber-600 font-bold tracking-widest uppercase text-sm mb-4">Confiance & Bonheur</span>
+            <h2 className="text-4xl font-extrabold text-gray-900">Ils ont adopté un compagnon</h2>
+            <p className="mt-4 text-gray-500">Découvrez les retours de nos familles adoptantes à Puteaux et aux alentours.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-[32px] shadow-sm border border-stone-100 relative group hover:shadow-xl transition-all duration-300">
+              <div className="flex text-amber-400 mb-4">
+                {[...Array(5)].map((_, i) => <Star key={i} size={18} fill="currentColor" />)}
+              </div>
+              <p className="text-gray-600 italic mb-6">"Une expérience merveilleuse ! Nos enfants sont ravis. Le hamster est incroyablement doux et n'a jamais montré de signe d'agressivité. Merci pour vos précieux conseils."</p>
+              <div className="flex items-center">
+                <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center text-amber-600 font-bold mr-4">S</div>
+                <div>
+                  <p className="font-black text-gray-900">Sophie D.</p>
+                  <p className="text-xs text-gray-500">Adopté en Octobre 2025</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-8 rounded-[32px] shadow-sm border border-stone-100 relative group hover:shadow-xl transition-all duration-300 transform md:-translate-y-4">
+              <div className="flex text-amber-400 mb-4">
+                {[...Array(5)].map((_, i) => <Star key={i} size={18} fill="currentColor" />)}
+              </div>
+              <p className="text-gray-600 italic mb-6">"On sent vraiment que c'est un élevage familial. Le petit 'Bibi' était déjà habitué aux mains, ce qui a facilité son intégration à la maison. Je recommande à 100%."</p>
+              <div className="flex items-center">
+                <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center text-amber-600 font-bold mr-4">M</div>
+                <div>
+                  <p className="font-black text-gray-900">Marc-Antoine</p>
+                  <p className="text-xs text-gray-500">Adopté en Décembre 2025</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-8 rounded-[32px] shadow-sm border border-stone-100 relative group hover:shadow-xl transition-all duration-300">
+              <div className="flex text-amber-400 mb-4">
+                {[...Array(5)].map((_, i) => <Star key={i} size={18} fill="currentColor" />)}
+              </div>
+              <p className="text-gray-600 italic mb-6">"L'accueil à Puteaux a été très pédagogique pour ma fille. Elle a appris les bons gestes avant même de repartir avec son nouveau petit ami. Un grand merci !"</p>
+              <div className="flex items-center">
+                <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center text-amber-600 font-bold mr-4">L</div>
+                <div>
+                  <p className="font-black text-gray-900">Laetitia</p>
+                  <p className="text-xs text-gray-500">Adopté en Novembre 2025</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       {/* Contact Form */}
       <section id="contact" className="py-20 bg-amber-600">
