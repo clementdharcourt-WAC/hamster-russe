@@ -187,7 +187,7 @@ const Website = () => {
             <h4 className="font-bold text-amber-800 mb-2">La base et les compléments</h4>
             <ul className="list-disc pl-5 space-y-1">
               <li><strong>Graines :</strong> Millet, avoine et tournesol (avec modération).</li>
-              <li><strong>Légumes frais :</strong> Courgette, concombre, endive (2 fois par semaine).</li>
+              <li><strong>Légumes frais :</strong> Courgette, concombre, endive, brocoli (2 fois par semaine).</li>
               <li><strong>Protéines :</strong> Vers de farine ou blanc de poulet cuit à l'eau.</li>
               <li><strong>Fruits :</strong> À considérer comme des friandises occasionnelles (pomme, fraise).</li>
             </ul>
